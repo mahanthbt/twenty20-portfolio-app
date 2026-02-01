@@ -1,0 +1,27 @@
+body{
+  font-family: Arial;
+  text-align:center;
+}
+
+.container{
+  width:90%;
+  max-width:400px;
+  margin:auto;
+}
+
+input{
+  display:block;
+  width:100%;
+  margin:10px 0;
+  padding:8px;
+}
+
+button{
+  padding:8px 16px;
+}
+
+@media(max-width:600px){
+  body{
+    font-size:14px;
+  }
+}

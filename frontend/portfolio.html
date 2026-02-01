@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>My Portfolio</h2>
+
+<p id="userEmail"></p>
+
+<h3>About Me</h3>
+<p>I am a passionate developer.</p>
+
+<h3>Skills</h3>
+<ul>
+  <li>Java</li>
+  <li>JavaScript</li>
+  <li>MongoDB</li>
+</ul>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+document.getElementById("userEmail").innerText =
+    "Logged in as: " + localStorage.getItem("email");
+
+function logout(){
+    localStorage.clear();
+    window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>
