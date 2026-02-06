@@ -1,36 +1,86 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <h2>My Portfolio</h2>
 
 <p id="userEmail"></p>
 
 <h3>About Me</h3>
-<p>I am a passionate developer.</p>
+<p>
+I am a self-motivated and passionate B.Tech student specializing in Information Science and Engineering. 
+I have a strong foundation in Computer Science fundamentals including DBMS, Operating Systems, and Computer Networks. 
+I am skilled in full-stack development and machine learning, with a keen interest in building scalable and impactful applications.
+</p>
 
-<h3>Skills</h3>
+<h3>Technical Skills</h3>
+
+<h4>Programming Languages</h4>
 <ul>
   <li>Java</li>
-  <li>JavaScript</li>
-  <li>MongoDB</li>
+  <li>Python</li>
 </ul>
+
+<h4>Frontend Technologies</h4>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>ReactJS</li>
+  <li>Tailwind CSS</li>
+</ul>
+
+<h4>Backend Technologies</h4>
+<ul>
+  <li>NodeJS</li>
+  <li>ExpressJS</li>
+</ul>
+
+<h4>Database</h4>
+<ul>
+  <li>MongoDB</li>
+  <li>SQL</li>
+</ul>
+
+<h4>Core Concepts</h4>
+<ul>
+  <li>OOPS</li>
+  <li>DBMS</li>
+  <li>Operating Systems</li>
+  <li>Computer Networks</li>
+</ul>
+
+<h3>Projects</h3>
+
+<h4>1. Cancer Detection Using Histopathological Images</h4>
+<p>
+Developed a hybrid deep learning model combining EfficientNetV2 and Wavelet Scattering Transform 
+to classify cancerous and non-cancerous tissue images. Achieved over 90% accuracy on a 17,500-image dataset. 
+Integrated Grad-CAM and SHAP for model explainability and deployed the system using Flask for real-time predictions.
+</p>
+
+<h4>2. Jobsy – Full Stack Job Portal</h4>
+<p>
+Built a full-stack job portal using MongoDB, ExpressJS, ReactJS, and NodeJS. 
+Implemented role-based authentication for Recruiters and Job Seekers, job filtering, 
+application tracking, and candidate management features.
+</p>
+
+<h3>Education</h3>
+<p>
+B.Tech in Information Science and Engineering  
+M S Ramaiah University of Applied Sciences (2022–2026)  
+CGPA: 8.3
+</p>
 
 <button onclick="logout()">Logout</button>
 
 <script>
+if (!localStorage.getItem("token")) {
+    window.location.href = "index.html";
+}
+
 document.getElementById("userEmail").innerText =
-    "Logged in as: " + localStorage.getItem("email");
+"Logged in as: " + localStorage.getItem("email");
 
 function logout(){
     localStorage.clear();
     window.location.href="index.html";
 }
 </script>
-
-</body>
-</html>
